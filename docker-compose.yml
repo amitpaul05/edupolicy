@@ -8,8 +8,8 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./src:/var/www/html:cached
-      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ${PROJECT_DIR}/src:/var/www/edupolicy:cached
+      - ${PROJECT_DIR}/nginx/default.conf:/etc/nginx/conf.d/default.conf
     depends_on:
       - php
     restart: unless-stopped
@@ -18,18 +18,17 @@ services:
     build: ./php
     container_name: edupolicy-php
     volumes:
-      - ./src:/var/www/html:cached
-      - drupal-files:/var/www/html/web/sites/default/files
-      - drupal-private:/var/www/html/web/sites/default/private
-      - drupal-tmp:/var/www/html/web/sites/default/tmp
+      - ${PROJECT_DIR}/src:/var/www/edupolicy:cached
+      - drupal-files:/var/www/edupolicy/web/sites/default/files
+      - drupal-private:/var/www/edupolicy/web/sites/default/private
+      - drupal-tmp:/var/www/edupolicy/web/sites/default/tmp
     command: >
       sh -c "
         mkdir -p web/sites/default/files web/sites/default/private web/sites/default/tmp &&
-        chown -R www-data:www-data web/sites/default/files web/sites/default/private web/sites/default/tmp &&
+        chown -R www-data:www-data web/sites/default &&
         php-fpm
       "
     restart: unless-stopped
-
 
   db:
     image: mysql:8.0

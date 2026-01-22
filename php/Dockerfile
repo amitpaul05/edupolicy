@@ -14,4 +14,4 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install pdo pdo_mysql gd mbstring xml opcache \
     && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /var/www/html
+WORKDIR /var/www/edupolicy
