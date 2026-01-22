@@ -1,0 +1,25 @@
+uuid: 3d1f53c3-4fbd-47d1-8bed-29203e77c921
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-menu
+  module:
+    - system
+  theme:
+    - edupolicy
+id: edupolicy_footermenu
+theme: edupolicy
+region: copyright
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer-menu'
+settings:
+  id: 'system_menu_block:footer-menu'
+  label: 'Footer Menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility: {  }

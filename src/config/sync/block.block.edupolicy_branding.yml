@@ -1,0 +1,25 @@
+uuid: f53ec10b-3e9b-4b32-ad5c-499d639e70c3
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - edupolicy
+_core:
+  default_config_hash: z1CNnJShsJkcXwaSN-Q3w4w2d42QdmE-k44HM1p-I-w
+id: edupolicy_branding
+theme: edupolicy
+region: nav_branding
+weight: -6
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: false
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

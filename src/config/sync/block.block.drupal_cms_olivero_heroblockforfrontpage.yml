@@ -1,0 +1,30 @@
+uuid: 25378565-03ec-48b4-a49d-26227aa49793
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:hero_block:66e3b416-e1ab-42a7-aa8d-3c5d6d8ecb55'
+  module:
+    - block_content
+    - system
+  theme:
+    - drupal_cms_olivero
+id: drupal_cms_olivero_heroblockforfrontpage
+theme: drupal_cms_olivero
+region: content
+weight: -8
+provider: null
+plugin: 'block_content:66e3b416-e1ab-42a7-aa8d-3c5d6d8ecb55'
+settings:
+  id: 'block_content:66e3b416-e1ab-42a7-aa8d-3c5d6d8ecb55'
+  label: 'Hero Block For Front page'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

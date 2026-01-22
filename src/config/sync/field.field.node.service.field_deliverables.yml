@@ -1,0 +1,22 @@
+uuid: 48f7eeef-30f8-408b-99f1-45a33da5a234
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_deliverables
+    - node.type.service
+  module:
+    - text
+id: node.service.field_deliverables
+field_name: field_deliverables
+entity_type: node
+bundle: service
+label: "What You'll Receive"
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

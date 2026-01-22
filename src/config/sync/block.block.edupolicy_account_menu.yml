@@ -1,0 +1,27 @@
+uuid: 5c3bfcd2-649f-41ca-a761-a05267de83b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - edupolicy
+_core:
+  default_config_hash: k7FOoomwYeSyzYJA-a85oS8dZUbrMwwqB5qzLpjd-qo
+id: edupolicy_account_menu
+theme: edupolicy
+region: nav_additional
+weight: -7
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,30 @@
+uuid: 4c9ce600-96e9-4531-81d6-338d14b57cb8
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:card_block:e7625733-7ae8-45b6-a0e1-c29a51dbf6b1'
+  module:
+    - block_content
+    - system
+  theme:
+    - drupal_cms_olivero
+id: drupal_cms_olivero_successfulcompletioncountsectionforfrontpage
+theme: drupal_cms_olivero
+region: content
+weight: -6
+provider: null
+plugin: 'block_content:e7625733-7ae8-45b6-a0e1-c29a51dbf6b1'
+settings:
+  id: 'block_content:e7625733-7ae8-45b6-a0e1-c29a51dbf6b1'
+  label: 'Successful completion Count Section For front page'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

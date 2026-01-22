@@ -1,0 +1,249 @@
+// import utilities
+@import "../../styles/utilities/global-utilities";
+
+// front page count down block design
+
+.count-down-section {
+  background-color: $color-gulf-stream;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  position: relative;
+  padding: 80px 0;
+  position: relative;
+
+  .layout__region--content {
+    max-width: 1216px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(248px, 1fr));
+    gap: 32px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+    .block {
+      background-color: #fafafa;
+      border-radius: 12px;
+      box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+        rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+      padding: 24px;
+
+      p {
+        color: $color-secondary;
+        font-size: 16px;
+        line-height: 24px;
+
+        strong {
+          color: $color-black;
+          font-weight: 700;
+          font-size: 30px;
+          line-height: 36px;
+        }
+      }
+
+      .field--name-field-image {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+
+// front page about section
+
+.about-section {
+  padding: 80px 0 50px;
+
+  .about-left-section {
+    padding-right: 60px;
+
+    .block {
+      h2 {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 40px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 1.625;
+        color: $color-secondary;
+        margin: 24px 0;
+      }
+
+      ul {
+        margin-bottom: 0;
+        list-style: none;
+        padding-left: 0;
+
+        li {
+          font-size: 16px;
+          line-height: 24px;
+          color: $color-mirage;
+          margin-bottom: 16px;
+          position: relative;
+          padding-left: 32px;
+
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            width: 20px;
+            height: 20px;
+            background-image: url("../../../assets/list-tick.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .about-right-section {
+    .block {
+      background-color: $color-mystic;
+      border: 1px solid #d3d7de;
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), 0 0 #0000,
+        var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+      text-align: center;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      h2 {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 28px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      .field--name-body {
+        color: $color-secondary;
+      }
+    }
+  }
+}
+
+// global heading block design
+.block-title-with-subtitle {
+  padding: 0 0 50px;
+
+  .block {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .field--name-field-subtitle {
+    background: $color-white;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: $color-black;
+    letter-spacing: 0.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $color-mischka;
+  }
+
+  .field--name-field-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+
+  .field--name-body {
+    color: $color-secondary;
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+.common-block-card {
+  background: $color-alabaster;
+  border-radius: 0.75rem;
+  border: 1px solid $color-mischka;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+/* Responsive adjustments count-down section */
+@media (max-width: 1400px) {
+  .count-down-section {
+    .layout__region {
+      max-width: 1200px;
+      padding: 0 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .count-down-section {
+    padding: 64px 0;
+
+    .layout__region {
+      padding: 0 20px;
+      gap: 32px;
+    }
+  }
+}
+
+/* Responsive adjustments about section */
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 50px 20px;
+    display: grid;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-section {
+    display: grid;
+    gap: 50px;
+
+    .about-left-section {
+      padding-right: 0;
+      text-align: center;
+
+      .block {
+        h2 {
+          font-size: 32px;
+          line-height: 38px;
+        }
+      }
+    }
+  }
+
+  .block-title-with-subtitle {
+    .field--name-field-title {
+      font-size: 32px;
+      line-height: 38px;
+      text-align: center;
+    }
+
+    .field--name-body{
+      text-align: center;
+    }
+  }
+}

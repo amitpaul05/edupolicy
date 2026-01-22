@@ -1,0 +1,30 @@
+uuid: 1dbd4bb7-45ba-415f-87cb-23e2563dbe45
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.resource.field_body
+    - field.field.node.resource.field_icon
+    - node.type.resource
+  module:
+    - text
+    - user
+id: node.resource.default
+targetEntityType: node
+bundle: resource
+mode: default
+content:
+  field_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_icon: true

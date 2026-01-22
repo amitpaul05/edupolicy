@@ -1,0 +1,21 @@
+uuid: a4d09600-295f-4712-a9c7-5f9fb096d53b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_case_study_tags
+    - node.type.case_study
+  module:
+    - options
+id: node.case_study.field_case_study_tags
+field_name: field_case_study_tags
+entity_type: node
+bundle: case_study
+label: Tags
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

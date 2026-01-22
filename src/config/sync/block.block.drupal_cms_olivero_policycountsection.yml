@@ -1,0 +1,30 @@
+uuid: 157ac612-d3db-4090-a211-a45bca5dfa6c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:card_block:1383c1b0-5b8c-4c7b-ae42-82ce17715956'
+  module:
+    - block_content
+    - system
+  theme:
+    - drupal_cms_olivero
+id: drupal_cms_olivero_policycountsection
+theme: drupal_cms_olivero
+region: content
+weight: -5
+provider: null
+plugin: 'block_content:1383c1b0-5b8c-4c7b-ae42-82ce17715956'
+settings:
+  id: 'block_content:1383c1b0-5b8c-4c7b-ae42-82ce17715956'
+  label: 'Policy count section'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

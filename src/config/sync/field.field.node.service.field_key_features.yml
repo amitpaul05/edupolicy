@@ -1,0 +1,22 @@
+uuid: 7ad5493f-66ff-4b81-94b6-b4a2c19ae24b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_key_features
+    - node.type.service
+  module:
+    - text
+id: node.service.field_key_features
+field_name: field_key_features
+entity_type: node
+bundle: service
+label: 'Key Features'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

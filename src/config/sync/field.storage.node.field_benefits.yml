@@ -1,0 +1,19 @@
+uuid: 792ae76f-5797-4988-b7fb-0f593da22559
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_benefits
+field_name: field_benefits
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

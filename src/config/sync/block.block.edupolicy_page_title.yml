@@ -1,0 +1,26 @@
+uuid: 705ac987-7f8a-4807-b3b2-634a8b7ec54a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - edupolicy
+_core:
+  default_config_hash: t-HH70cHd_eKcY1uynzM1CT-qB9LIuiE4Sr3c8Unsrg
+id: edupolicy_page_title
+theme: edupolicy
+region: content
+weight: -4
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "<front>\r\n/services\r\n/services/*\r\n/pricing"

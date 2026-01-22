@@ -1,0 +1,27 @@
+uuid: a891eb1b-59c2-4748-81c4-395e4ac9f270
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - edupolicy
+_core:
+  default_config_hash: 6pn37fuJuVsmLS7iCFBsexuxh2H5oOK6n5qJQw8NFi8
+id: edupolicy_main_navigation
+theme: edupolicy
+region: nav_main
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility: {  }

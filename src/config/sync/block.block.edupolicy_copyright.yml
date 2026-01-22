@@ -1,0 +1,29 @@
+uuid: 36aec583-4321-44be-9a11-aac630777988
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:text_block:d4629926-6b88-49c1-9c7e-ea5bd3c7cce5'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - edupolicy
+third_party_settings:
+  block_class:
+    classes: copyright-text
+id: edupolicy_copyright
+theme: edupolicy
+region: copyright
+weight: 0
+provider: null
+plugin: 'block_content:d4629926-6b88-49c1-9c7e-ea5bd3c7cce5'
+settings:
+  id: 'block_content:d4629926-6b88-49c1-9c7e-ea5bd3c7cce5'
+  label: Copyright
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

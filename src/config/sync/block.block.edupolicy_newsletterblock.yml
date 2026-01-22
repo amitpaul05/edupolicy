@@ -1,0 +1,29 @@
+uuid: c8912029-2620-4a0d-9959-783f75efa73a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:text_block:3cd7df6f-7382-49d1-a50e-e249a7b9231d'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - edupolicy
+third_party_settings:
+  block_class:
+    classes: newsletter
+id: edupolicy_newsletterblock
+theme: edupolicy
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:3cd7df6f-7382-49d1-a50e-e249a7b9231d'
+settings:
+  id: 'block_content:3cd7df6f-7382-49d1-a50e-e249a7b9231d'
+  label: 'Stay Updated'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

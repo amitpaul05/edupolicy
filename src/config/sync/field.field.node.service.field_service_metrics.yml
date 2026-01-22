@@ -1,0 +1,31 @@
+uuid: fe07c84b-6f4d-4f7d-82e1-e7373cc52d7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_service_metrics
+    - node.type.service
+    - paragraphs.paragraphs_type.info_block
+  module:
+    - entity_reference_revisions
+id: node.service.field_service_metrics
+field_name: field_service_metrics
+entity_type: node
+bundle: service
+label: 'Service Metrics'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      info_block: info_block
+    negate: 0
+    target_bundles_drag_drop:
+      info_block:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions

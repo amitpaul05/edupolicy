@@ -1,0 +1,22 @@
+uuid: 06f2da3d-96fa-4e69-aaa0-2e84b85d216d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - edupolicy
+_core:
+  default_config_hash: TTq4_0QoqSowv_o1XuE2zbuGNqL2-aWGqNWECuGBog0
+id: edupolicy_content
+theme: edupolicy
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

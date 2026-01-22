@@ -1,0 +1,529 @@
+// import utilities
+@import "../../styles/utilities/global-utilities";
+
+.about-page {
+  main {
+    background: linear-gradient(to bottom, white, #26737333);
+  }
+
+  // mission and vision section
+
+  .our-mission-vission {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    margin-bottom: 48px;
+
+    .block {
+      border-color: $color-mischka;
+      background-color: $color-alabaster;
+      box-shadow: 0 2px 8px -2px rgba(0, 41, 102, 0.1);
+      border-radius: 12px;
+      padding: 24px;
+      width: 100%;
+      height: 100%;
+
+      h2 {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px;
+        margin-bottom: 16px;
+        text-align: center;
+      }
+
+      .field--name-body {
+        font-size: 14px;
+        line-height: 20px;
+        color: $color-pale-sky;
+        text-align: center;
+      }
+    }
+  }
+
+  // our team section
+
+  .our-team {
+    margin: 0 0 65px;
+
+    .view-header {
+      margin-bottom: 32px;
+      display: flex;
+
+      h2 {
+        font-size: 30px;
+        line-height: 32px;
+        font-weight: 700;
+        color: $color-mirage;
+        text-align: center;
+        margin-bottom: 0;
+      }
+
+      &::before {
+        content: url("../../../assets/our-team.png");
+        height: 32px;
+        width: 32px;
+        display: inline-block;
+        margin-right: 10px;
+      }
+
+      p {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        color: $color-pale-sky;
+        text-align: center;
+      }
+    }
+
+    .view-content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+
+      // Responsive breakpoints
+      @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+        padding: 30px 15px;
+      }
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 20px 10px;
+      }
+    }
+
+    .views-row {
+      display: flex;
+      height: 100%;
+
+      .views-field {
+        width: 100%;
+        display: flex;
+
+        .field-content {
+          width: 100%;
+          display: flex;
+        }
+      }
+    }
+
+    .team-wrapper {
+      background: $color-alabaster;
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      border: 1px solid $color-mischka;
+      min-height: 100%;
+      border-width: 1px;
+
+      .avatar {
+        align-items: center;
+        background-image: linear-gradient(135deg, #002a80, #1754cf);
+        border-radius: 50%;
+        color: $color-white;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32px;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 16px;
+        letter-spacing: 1.3px;
+      }
+
+      .name {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: $color-mirage;
+        margin-bottom: 0.25rem;
+        line-height: 1.75rem;
+        flex-shrink: 0;
+      }
+
+      .designation {
+        font-size: 1rem;
+        font-weight: 500;
+        color: $color-primary;
+        text-transform: capitalize;
+        letter-spacing: 0.05em;
+        margin-bottom: 0.75rem;
+        position: relative;
+        flex-shrink: 0;
+      }
+
+      .body {
+        flex: 1;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+
+        p {
+          font-size: 0.875rem;
+          line-height: 1.25rem;
+          color: $color-pale-sky;
+          margin-bottom: 0.75rem;
+          font-weight: 400;
+          text-align: center;
+        }
+      }
+      .expertise {
+        .item-list li {
+          margin: 0;
+        }
+
+        .item-list ul {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 0.25rem;
+
+          li {
+            background: $color-paradiso;
+            color: white;
+            display: inline-flex;
+            border-color: transparent;
+            border-width: 1px;
+            border-radius: 9999px;
+            align-items: center;
+            font-weight: 600;
+            font-size: 0.75rem;
+            line-height: 1rem;
+            padding-top: 0.125rem;
+            padding-bottom: 0.125rem;
+            padding-left: 0.625rem;
+            padding-right: 0.625rem;
+          }
+        }
+      }
+    }
+  }
+
+  .credential-section-title {
+    h2 {
+      font-size: 30px;
+      font-weight: 700;
+      display: flex;
+      line-height: 36px;
+      letter-spacing: 1.1px;
+      margin-bottom: 32px;
+
+      &::before {
+        content: url("../../../assets/badge-icon-big.png");
+        height: 32px;
+        width: 32px;
+        display: inline-block;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  #credentials {
+    margin-bottom: 32px;
+
+    &.layout--threecol-section {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .block {
+      background-color: $color-alabaster;
+      border: 1px solid $color-mischka;
+      border-radius: 12px;
+      padding: 24px;
+
+      h2 {
+        align-items: center;
+        font-size: 18px;
+        font-weight: 600;
+        display: flex;
+        line-height: 28px;
+        letter-spacing: 1.1px;
+        margin-bottom: 15px;
+
+        &::before {
+          height: 32px;
+          width: 32px;
+          display: inline-block;
+          margin-right: 10px;
+        }
+      }
+
+      .field--name-body {
+        font-size: 14px;
+        line-height: 20px;
+
+        ul,
+        ol {
+          padding-left: 22px;
+
+          li {
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+
+    .academic-block {
+      h2 {
+        &::before {
+          content: url("../../../assets/academic.png");
+        }
+      }
+    }
+
+    .professional-block {
+      h2 {
+        &::before {
+          content: url("../../../assets/guard.png");
+        }
+      }
+    }
+
+    .institution-block {
+      h2 {
+        &::before {
+          content: url("../../../assets/building-icon.png");
+        }
+      }
+    }
+  }
+
+  .award-section {
+    background-color: $color-alabaster;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 64px;
+
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 28px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .award-view {
+      .view-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+    }
+
+    .award-wrapper {
+      display: flex;
+
+      .left-content {
+        &::before {
+          content: url("../../../assets/badge.png");
+          display: inline-block;
+          margin-right: 10px;
+        }
+      }
+
+      .title,
+      .body {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      .body {
+        color: #626d84;
+      }
+    }
+  }
+
+  // why choose edupolicy section
+
+  .why-edupolicy-section-title {
+    background-color: $color-white;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+
+    h2 {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 32px;
+      padding: 32px 0 24px;
+      text-align: center;
+      margin: 0;
+    }
+  }
+
+  .why-edupolicy-section {
+    background-color: $color-white;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding-bottom: 30px;
+
+    .block {
+      text-align: center;
+      margin-bottom: 24px;
+
+      h2 {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        margin-bottom: 10px;
+      }
+
+      .field--name-body {
+        color: $color-secondary;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  // our approach section
+
+  .our-approach-section {
+    margin-bottom: 64px;
+
+    h2 {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 36px;
+      display: flex;
+      margin-bottom: 32px;
+
+      &::before {
+        content: url("../../../assets/round-shape.png");
+        height: 32px;
+        width: 32px;
+        display: inline-block;
+        margin-right: 10px;
+      }
+    }
+
+    .field--name-field-component {
+      display: grid;
+      column-gap: 32px;
+      row-gap: 24px;
+      grid-template-columns: repeat(2, 1fr);
+
+      > .field__item {
+        background-color: $color-white;
+        border: 1px solid $color-mischka;
+        border-radius: 12px;
+        padding: 24px;
+
+        .field--name-field-title {
+          color: $color-primary;
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 28px;
+          margin-bottom: 12px;
+        }
+
+        .field--name-field-description {
+          color: $color-secondary;
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}
+
+// Responsive styles for the about page
+
+@media (max-width: 768px) {
+  .about-page {
+    .our-team {
+      .view-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+        padding: 20px 10px;
+      }
+    }
+
+    #credentials {
+      margin-bottom: 32px;
+
+      &.layout--threecol-section {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+      }
+    }
+
+    .award-section {
+      .award-view {
+        .view-content {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .about-page {
+    .why-edupolicy-section {
+      padding: 0 20px;
+    }
+
+    .our-mission-vission {
+      grid-template-columns: unset;
+    }
+
+    #credentials {
+      margin-bottom: 32px;
+
+      &.layout--threecol-section {
+        grid-template-columns: unset;
+      }
+    }
+
+    .credential-section-title {
+      h2{
+        font-size: 32px;
+        line-height: 38px;
+      }
+    }
+
+    .our-team {
+      .view-header {
+        h2 {
+          font-size: 32px;
+          line-height: 38px;
+        }
+      }
+      .view-content {
+        padding: 0;
+        grid-template-columns: unset;
+      }
+    }
+
+    .our-approach-section {
+      margin-bottom: 50px;
+
+      h2{
+        font-size: 32px;
+        line-height: 38px;
+      }
+
+      .field--name-field-component {
+        grid-template-columns: unset;
+      }
+    }
+
+    .award-section {
+      margin-bottom: 50px;
+
+      .award-view {
+        .view-content {
+          grid-template-columns: unset;
+        }
+      }
+    }
+  }
+}

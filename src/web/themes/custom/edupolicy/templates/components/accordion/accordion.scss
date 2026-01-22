@@ -1,0 +1,43 @@
+// import utilities
+@import "../../styles/utilities/global-utilities";
+
+.ui-accordion {
+  border-bottom: 1px solid #d3d7de;
+
+  .ui-accordion-header {
+    background: no-repeat;
+    border: 0;
+    border-top: 1px solid #d3d7de;
+    border-radius: 0;
+    font-weight: bold;
+    margin: 0;
+    padding: 16px 0;
+    position: relative;
+
+    .ui-accordion-header-icon {
+      background-image: url('../../../assets/arrow-down.png');
+      background-position: center;
+      position: absolute;
+      right: 0;
+      transition: 0.5s;
+    }
+
+    a {
+      color: $color-black;
+    }
+
+    &.ui-state-active {
+
+      .ui-accordion-header-icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .accordion-description {
+    border: 0;
+    color: #4b5563;
+    padding: 0 0 16px;
+    text-align: center;
+  }
+}

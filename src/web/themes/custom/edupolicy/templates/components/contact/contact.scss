@@ -1,0 +1,363 @@
+// import utilities
+@import "../../styles/utilities/global-utilities";
+
+.contact-page {
+  main {
+    background: linear-gradient(to bottom, white, #26737333);
+  }
+
+  .contact-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-bottom: 48px;
+
+    .block {
+      background-color: $color-white;
+      border: 1px solid $color-mischka;
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      height: 100%;
+
+      &::before {
+        height: 32px;
+        width: 32px;
+        display: inline-block;
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+      }
+
+      .field--name-body {
+        color: $color-secondary;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  .response-block {
+    &::before {
+      content: url("../../../assets/message-icon.png");
+    }
+  }
+
+  .consultation-block {
+    &::before {
+      content: url("../../../assets/video-icon-big.png");
+    }
+  }
+
+  .remote-block {
+    &::before {
+      content: url("../../../assets/location-icon.png");
+    }
+  }
+
+  .book-consultation-block {
+    background-image: linear-gradient(
+      to right,
+      #002a801a,
+      rgba(0, 0, 128, 0.05) 50%,
+      #267fd91a
+    );
+    border-radius: 12px;
+    border: 1px solid #002a8033;
+    padding: 24px;
+    margin-bottom: 48px;
+
+    .field--name-body {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      img {
+        border-radius: 50%;
+        background: #002a801a;
+        padding: 10px;
+        height: 48px;
+        width: 48px;
+        margin-top: -10px;
+        margin-right: 10px;
+      }
+
+      h6 {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+      }
+
+      p {
+        color: $color-secondary;
+        font-size: 14px;
+        line-height: 20px;
+        margin-left: auto;
+      }
+
+      a {
+        align-items: center;
+        background-color: $color-primary;
+        border-radius: 12px;
+        color: $color-white;
+        display: flex;
+        font-weight: 500;
+        gap: 15px;
+        text-decoration: none;
+        padding: 8px 16px;
+        transition: background 0.3s ease, color 0.3s ease;
+
+        &::before {
+          content: url("../../../assets/calender-icon.png");
+        }
+
+        &:hover {
+          background: #002a80e6;
+        }
+      }
+    }
+  }
+
+  // webform section
+
+  .webform-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
+
+    .block {
+      background-color: $color-alabaster;
+      border: 1px solid $color-mischka;
+      border-radius: 12px;
+      padding: 24px;
+
+      h2 {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 24px;
+        margin-bottom: 0;
+        display: flex;
+        gap: 5px;
+
+        &::before {
+          height: auto;
+          width: 32px;
+          display: inline-block;
+        }
+      }
+
+      p {
+        color: $color-secondary;
+        font-size: 14px;
+        line-height: 20px;
+        margin: 5px 0 25px;
+      }
+
+      form {
+        label {
+          display: flex;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 14px;
+          margin-bottom: 10px;
+        }
+
+        .form-required {
+          &::after {
+            background-image: none;
+            content: "*";
+            color: $color-black;
+          }
+        }
+
+        input {
+          border-radius: 10px;
+          padding: 8px 12px;
+        }
+
+        .button {
+          background: $color-primary;
+          border-radius: 12px;
+          border: 0;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 20px;
+          padding: 10px 16px;
+          width: 100%;
+          transition: background 0.3s ease, color 0.3s ease;
+
+          &:hover {
+            background: #002a80e6;
+          }
+        }
+      }
+    }
+
+    .contact-webform {
+      margin-bottom: 24px;
+
+      h2 {
+        &::before {
+          content: url("../../../assets/envelop.png");
+        }
+      }
+    }
+
+    .consultation-webform {
+      h2 {
+        &::before {
+          content: url("../../../assets/video-icon-small.png");
+        }
+      }
+    }
+
+    .phone-number-block,
+    .email-block,
+    .office-hour-block {
+      padding: 0 0 0 24px;
+      border: 0;
+
+      p {
+        margin: 0 0 10px;
+      }
+    }
+
+    .contact-ways-block-title {
+      border: 0;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+
+      h2 {
+        display: block;
+        text-align: center;
+      }
+    }
+
+    .phone-number-block,
+    .email-block {
+      border-radius: 0;
+    }
+
+    .office-hour-block {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      padding-bottom: 10px;
+    }
+
+    .icon-with-text-block-wrapper {
+      display: flex;
+      gap: 10px;
+
+      .field--name-field-title {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      .icon {
+        max-width: 20px;
+      }
+
+      a {
+        color: $color-secondary;
+      }
+    }
+  }
+
+  .horizontal-line-block {
+    hr {
+      color: $color-mischka;
+      margin: 64px 0;
+      opacity: 1;
+    }
+  }
+
+  .faq-title-section {
+    text-align: center;
+    margin-bottom: 48px;
+
+    h2 {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 36px;
+    }
+
+    .field--name-body {
+      color: $color-secondary;
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+
+  .faqs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+
+    .block {
+      background-color: $color-white;
+      border: 1px solid $color-mischka;
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      margin-bottom: 32px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      h2 {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 28px;
+      }
+
+      .field--name-body {
+        color: $color-secondary;
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .contact-page {
+    .webform-section {
+      grid-template-columns: unset;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-page {
+    .contact-info {
+      grid-template-columns: unset;
+    }
+
+    .webform-section {
+      grid-template-columns: unset;
+    }
+
+    .faqs {
+      grid-template-columns: unset;
+    }
+    .book-consultation-block {
+      margin-bottom: 50px;
+
+      .field--name-body {
+        display: block;
+      }
+    }
+
+    .horizontal-line-block {
+      hr {
+        margin: 50px 0;
+      }
+    }
+  }
+}

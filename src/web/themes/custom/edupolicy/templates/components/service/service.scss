@@ -1,0 +1,850 @@
+// import utilities
+@import "../../styles/utilities/global-utilities";
+
+.service-overview {
+  background: #f9fafb;
+  margin-left: calc(-50vw + 50%);
+  padding: 80px 0;
+  width: 100vw;
+
+  .field--name-field-service-overview {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 48px;
+    text-align: center;
+
+    .field__label {
+      font-size: 36px;
+      line-height: 40px;
+      margin-bottom: 16px;
+    }
+  }
+
+  .field--name-field-service-metrics {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+
+    > .field__item {
+      border: 1px solid rgba(211, 214, 220, 1);
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .field--name-field-title {
+      color: #002b80;
+      font-size: 30px;
+      line-height: 36px;
+      margin-bottom: 8px;
+    }
+
+    .field--name-field-description {
+      color: #4b5563;
+    }
+  }
+}
+
+.node__content {
+  .field-group-tabs-wrapper {
+    padding: 80px 0;
+  }
+
+  .horizontal-tabs {
+    margin: 0;
+
+    ul {
+      &.horizontal-tabs-list {
+        background: #f0f2f4;
+        border-radius: 12px;
+        display: grid;
+        gap: 5px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin: 0;
+        padding: 4px;
+        text-align: center;
+
+        &:after {
+          display: none;
+        }
+
+        li {
+          &.horizontal-tab-button {
+            border: 0;
+
+            &:after,
+            &:before {
+              display: none !important;
+            }
+
+            a {
+              border-radius: 12px;
+              color: $color-black;
+              font-size: 14px;
+              line-height: 20px;
+              padding: 6px 12px;
+
+              &:after,
+              &:before {
+                display: none !important;
+              }
+
+              &:hover,
+              &:focus {
+                background: $color-white;
+                color: $color-black;
+              }
+            }
+
+            &.selected {
+              a {
+                background: $color-white;
+                color: $color-black;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .horizontal-tabs-panes {
+      details {
+        margin: 32px 0 0;
+
+        .card-body {
+          padding: 0;
+        }
+
+        .field__label {
+          font-size: 24px;
+          line-height: 32px;
+          margin-bottom: 32px;
+          text-align: center;
+        }
+
+        .field__item {
+          ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+              margin-bottom: 16px;
+              padding-left: 30px;
+              position: relative;
+
+              &:before {
+                background-image: url("../../../assets/circle-check.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                content: "";
+                height: 20px;
+                left: 0;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 20px;
+              }
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+
+      #edit-group-overview {
+        .card-body {
+          display: grid;
+          gap: 32px;
+          grid-template-columns: 1fr 1fr;
+          padding: 0;
+
+          .field--name-field-benefits {
+            .field__item {
+              ul {
+                li {
+                  &:before {
+                    background-image: url("../../../assets/star.png");
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      #edit-group-how-it-works {
+        .field--name-field-our-process {
+          > .field__items {
+            background: #fafafa;
+            counter-reset: section;
+            display: grid;
+            gap: 32px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+
+            > .field__item {
+              border: 1px solid #d3d7de;
+              border-radius: 12px;
+              padding: 24px;
+              text-align: center;
+
+              &::before {
+                align-items: center;
+                background: #002a80;
+                border-radius: 100%;
+                color: #fff;
+                content: counter(section);
+                counter-increment: section;
+                display: flex;
+                font-size: 1.5rem;
+                height: 48px;
+                justify-content: center;
+                margin: 0 auto 16px;
+                width: 48px;
+              }
+
+              .field--name-field-title {
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+
+      #edit-group-why-choose-us {
+        .card-body {
+          display: grid;
+          gap: 32px;
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .field--name-field-deliverables {
+          .field__item {
+            ul {
+              li {
+                border: 1px solid rgb(229, 231, 235);
+                border-radius: 12px;
+                padding: 16px 16px 16px 45px;
+
+                &:before {
+                  left: 15px;
+                }
+              }
+            }
+          }
+        }
+
+        .field--name-field-why-choose-us {
+          h4 {
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 8px;
+          }
+
+          p {
+            margin-bottom: 24px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.service-call-to-action {
+  background: #111827;
+  color: $color-white;
+  margin-left: calc(-50vw + 50%);
+  padding: 80px 0;
+  text-align: center;
+  width: 100vw;
+
+  .field--name-field-title {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 40px;
+    margin-bottom: 16px;
+  }
+
+  .field--name-field-description {
+    color: #d1d5db;
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 32px;
+  }
+
+  .field--name-field-link {
+    display: inline-block;
+
+    a {
+      background: #2563eb;
+      border-radius: 12px;
+      color: $color-white;
+      display: flex;
+      gap: 15px;
+      line-height: 40px;
+      padding: 0 32px;
+      text-decoration: none;
+
+      &:after {
+        content: "\f061";
+        font-family: $font-awesome;
+        font-weight: 900;
+      }
+    }
+  }
+}
+
+// service parent page design
+
+.service-page {
+  .common-card {
+    .block {
+      background: $color-alabaster;
+      border-radius: 0.75rem;
+      border: 1px solid $color-mischka;
+      padding: 1.5rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+  }
+
+  .process-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    margin-bottom: 80px;
+
+    .block {
+      &:hover {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+        .field--name-field-subtitle {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .icon-with-text-block-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .field--name-field-subtitle {
+      background-image: linear-gradient(135deg, #002a80, #1754cf);
+      align-items: center;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 32px;
+      width: 64px;
+      height: 64px;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto 16px;
+      letter-spacing: 1.3px;
+      transition: all 0.3s ease;
+    }
+
+    .field--name-field-title {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 28px;
+      margin-bottom: 20px;
+    }
+
+    .field--name-body {
+      color: $color-secondary;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  .service-filter-section {
+    .views-exposed-form {
+      background-color: #f0f2f44d;
+      padding: 32px 32px 0;
+
+      .form-item {
+        display: block;
+        width: 100%;
+
+        input {
+          border-color: #e2e4e9;
+          border-radius: 10px;
+          font-size: 14px;
+          line-height: 20px;
+          padding: 10px 12px 8px;
+        }
+      }
+
+      .form-type-select,
+      .form-actions {
+        margin: 0;
+      }
+
+      .bef-links {
+        ul {
+          padding-left: 0;
+          list-style-type: none;
+          display: flex;
+          gap: 10px;
+
+          a {
+            background: transparent;
+            border: 1px solid $color-mischka;
+            color: $color-black;
+            display: inline-block;
+            padding: 0.125rem 0.625rem;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+
+            &:hover {
+              background-color: #002a801a;
+            }
+
+            &.bef-link--selected {
+              background: $color-primary;
+              color: $color-white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .view-services {
+    margin: 80px 0;
+
+    .view-content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+
+      .views-row {
+        background-color: $color-alabaster;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        border: 1px solid $color-mischka;
+        border-radius: 12px;
+        padding: 24px;
+
+        &:hover {
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+      }
+
+      .service-wrapper {
+        .title {
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 32px;
+          margin-bottom: 10px;
+        }
+
+        .body {
+          font-size: 14px;
+          line-height: 20px;
+
+          p {
+            color: $color-secondary;
+          }
+
+          ul,
+          ol {
+            color: $color-black;
+            list-style-type: none;
+            padding-left: 0;
+
+            li {
+              display: flex;
+              gap: 12px;
+              margin-bottom: 10px;
+
+              &::before {
+                content: "\f058";
+                color: #339933;
+                font-family: "Font Awesome 6 Free";
+                font-weight: 500;
+                font-size: 20px;
+              }
+            }
+          }
+        }
+
+        .service-bottom-section {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .btn-wrapper {
+            display: flex;
+            gap: 10px;
+          }
+
+          .category {
+            background: transparent;
+            border: 1px solid $color-mischka;
+            color: $color-black;
+            display: inline-block;
+            padding: 2px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1.1px;
+            text-transform: uppercase;
+            height: 100%;
+          }
+
+          .pricing-btn {
+            border-radius: 12px;
+            font-size: 14px;
+            line-height: 20px;
+            background: $color-white;
+            color: $color-mirage;
+            border: 1px solid $color-athens-gray;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+
+            &:hover {
+              background: #ecececb0;
+              border-color: $color-gray-chateau;
+              box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+                var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+            }
+          }
+
+          .learn-more-btn {
+            align-items: center;
+            background: $color-curious-blue;
+            border-radius: 12px;
+            color: $color-white;
+            display: flex;
+            font-size: 14px;
+            justify-content: center;
+            gap: 8px;
+            line-height: 20px;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .why-choose-edupolicy-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-bottom: 80px;
+
+    .icon-with-text-block-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+
+      .field--name-field-title {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 24px;
+        margin-bottom: 20px;
+      }
+
+      .field--name-body {
+        color: $color-secondary;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+.common-call-to-action:not(.layout-builder__layout) {
+  color: $color-white;
+  background-image: linear-gradient(
+    135deg,
+    $color-primary 0%,
+    $color-paradiso 100%
+  );
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 80px 0;
+  position: relative;
+  text-align: center;
+
+  .field--name-field-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+
+  .field--name-body {
+    font-size: 20px;
+    opacity: 0.9;
+    line-height: 28px;
+
+    .book-consultation-wrapper {
+      border-radius: 12px;
+      border: 1px solid #184d79;
+      padding: 24px;
+      max-width: 1216px;
+      margin: 0 auto 25px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background-image: linear-gradient(135deg, #133f7c 0%, #1f627f 100%);
+      text-align: left;
+
+      img {
+        border-radius: 50%;
+        background: #002a801a;
+        padding: 10px;
+        height: 48px;
+        width: 48px;
+        margin-top: -10px;
+        margin-right: 10px;
+      }
+
+      h6 {
+        color: $color-white;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        margin-bottom: 0;
+      }
+
+      p {
+        color: $color-white;
+        font-size: 14px;
+        line-height: 20px;
+        margin-left: auto;
+      }
+
+      a {
+        align-items: center;
+        background-color: $color-primary;
+        border-radius: 12px;
+        color: $color-white;
+        display: flex;
+        font-weight: 500;
+        gap: 15px;
+        text-decoration: none;
+        padding: 8px 16px;
+        transition: background 0.3s ease, color 0.3s ease;
+
+        &::before {
+          content: url("../../../assets/calender-icon.png");
+        }
+
+        &:hover {
+          background: #002a80e6;
+        }
+      }
+    }
+  }
+
+  .field--name-field-link {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    .field__item {
+      a {
+        background-color: $color-paradiso;
+        border-radius: 10px;
+        display: inline-block;
+        color: $color-white;
+        font-size: 18px;
+        padding: 9px 32px;
+        line-height: 28px;
+        transition: all 0.5 ease-in-out;
+
+        &:hover {
+          background-color: #267373cc;
+        }
+
+        &::after {
+          content: "\f061";
+          font-family: $font-awesome;
+          font-weight: 800;
+          margin-left: 10px;
+        }
+      }
+
+      &:nth-child(2) {
+        a {
+          padding: 7px 32px;
+          background-color: transparent;
+          border: 1px solid $color-white;
+          transition: all 0.5 ease-in-out;
+
+          &:hover {
+            color: $color-black;
+            background-color: $color-white;
+          }
+        }
+      }
+    }
+  }
+}
+
+//service  responsive adjustments
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+  .node__content {
+    .horizontal-tabs {
+      border: none;
+      .horizontal-tabs-panes {
+        #edit-group-how-it-works {
+          .field--name-field-our-process {
+            > .field__items {
+              grid-template-columns: unset;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .service-page {
+    .process-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .view-services {
+      margin: 50px 0;
+
+      .view-content {
+        grid-template-columns: unset;
+      }
+
+      .view-contentservice-page {
+        .view-services {
+          .view-content {
+            grid-template-columns: unset;
+          }
+        }
+      }
+    }
+  }
+
+  .common-call-to-action {
+    .layout__region--content {
+      padding: 0 24px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .service-page {
+    .service-filter-section {
+      .views-exposed-form {
+        .bef-links {
+          ul {
+            width: 100%;
+            display: block;
+            li {
+              display: inline;
+            }
+          }
+        }
+      }
+    }
+    .process-cards {
+      margin-bottom: 50px;
+      grid-template-columns: unset;
+    }
+    .view-services {
+      .view-content {
+        .service-wrapper {
+          .service-bottom-section {
+            .btn-wrapper {
+              display: grid;
+              gap: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    .why-choose-edupolicy-cards {
+      grid-template-columns: unset;
+      margin-bottom: 50px;
+    }
+
+    .common-call-to-action {
+      .field--name-field-link {
+        .field__item {
+          a {
+            font-size: 16px;
+          }
+        }
+      }
+      .field--name-body {
+        .book-consultation-wrapper {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .common-call-to-action:not(.layout-builder__layout) {
+    padding: 50px 0;
+
+    .field--name-field-title {
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+
+  .service-overview {
+    padding: 50px 0;
+
+    .field--name-field-service-metrics {
+      grid-template-columns: unset;
+    }
+
+    .field--name-field-service-overview {
+      .field__label {
+        font-size: 32px;
+        line-height: 38px;
+      }
+    }
+  }
+
+  .node__content {
+    .field-group-tabs-wrapper {
+      padding: 50px 0;
+
+      .horizontal-tabs {
+        border: none;
+      }
+    }
+  }
+
+  .service-call-to-action {
+    .field--name-field-title {
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+uuid: c631c527-484e-4a04-a0b0-adf1914b80ee
+langcode: en
+status: true
+dependencies: {  }
+id: text_block_with_subtitle
+label: 'Text block with subtitle'
+revision: false
+description: null

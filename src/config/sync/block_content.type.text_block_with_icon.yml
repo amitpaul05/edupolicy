@@ -1,0 +1,8 @@
+uuid: da6c887e-0658-4473-b5fd-404940517e28
+langcode: en
+status: true
+dependencies: {  }
+id: text_block_with_icon
+label: 'Text block with icon'
+revision: false
+description: null

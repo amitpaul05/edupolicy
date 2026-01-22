@@ -1,0 +1,24 @@
+uuid: 70034fb6-9547-4870-a163-59aa21859b73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.award.field_body
+    - node.type.award
+  module:
+    - text
+    - user
+id: node.award.default
+targetEntityType: node
+bundle: award
+mode: default
+content:
+  field_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  links: true

@@ -1,0 +1,43 @@
+// import utilities
+@import "../../styles/utilities/global-utilities";
+
+.container {
+  max-width: 1216px!important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+.row {
+  margin-left: -20px;
+  margin-right: -20px;
+
+  > * {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+body{
+
+  .dialog-off-canvas-main-canvas {
+    height: unset !important;
+  }
+
+  .navbar-expand-lg{
+    padding: 0;
+  }
+}
+
+.region-sidebar-first,
+.region-sidebar-second,
+.region-footer,
+.region-content {
+  padding: 0 !important;
+}
+
+.path-frontpage {
+
+  main {
+    background-color: #E4EFFE;
+  }
+}

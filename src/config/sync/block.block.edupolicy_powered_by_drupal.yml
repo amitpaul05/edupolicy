@@ -1,0 +1,22 @@
+uuid: e82fb69e-9be2-4321-8da0-5138bbb0aca7
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - edupolicy
+_core:
+  default_config_hash: LYB-gku9ubqjdd5qGBF9FAQlvOee3DA-Z4HaItrIOOI
+id: edupolicy_powered_by_drupal
+theme: edupolicy
+region: footer
+weight: -4
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

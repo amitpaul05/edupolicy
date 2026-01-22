@@ -1,0 +1,19 @@
+uuid: 039507af-e483-40f2-9c71-6ccde5a40a45
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_solution
+    - node.type.case_study
+id: node.case_study.field_solution
+field_name: field_solution
+entity_type: node
+bundle: case_study
+label: Solution
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

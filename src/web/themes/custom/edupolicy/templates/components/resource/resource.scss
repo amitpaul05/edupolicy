@@ -1,0 +1,141 @@
+// import utilities
+@import "../../styles/utilities/global-utilities";
+
+.resources-page {
+  main {
+    background: linear-gradient(to bottom, white, #f0f4f8);
+  }
+
+  .view-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    grid-auto-rows: 1fr;
+  }
+
+  .resource-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    background: $color-white;
+    border: 1px solid $color-athens-gray;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 4px 12px -4px rgba(0, 0, 0, 0.12);
+
+    .icon-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 12px;
+      flex-shrink: 0;
+
+      svg,
+      img {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+      }
+
+      .title {
+        font-size: 24px;
+        line-height: 1;
+        font-weight: 600;
+        margin: 0;
+      }
+    }
+
+    .resource-details {
+      font-size: 14px;
+      line-height: 1.5;
+      color: $color-secondary;
+      margin-bottom: 12px;
+      flex: 1; // This takes up all available space
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      text-align: center;
+
+      p {
+        margin: 0 0 16px 0;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+
+        li {
+          position: relative;
+          padding-left: 16px;
+          text-align: center;
+
+          // Create custom bullet point
+          &::before {
+            content: "•";
+            color: $color-secondary;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    a {
+      display: block; // Or flex if you want to align content inside
+      width: 100%;
+      margin-top: auto;
+      text-decoration: none;
+      color: $color-mirage;
+      border: 1px solid $color-athens-gray;
+      background: $color-white;
+      border-radius: 12px;
+      padding: 8px 16px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      text-align: center;
+      box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000,
+        0 4px 12px -4px rgba(0, 0, 0, 0.15);
+      flex-shrink: 0;
+
+      span {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        justify-content: center;
+        width: 100%;
+      }
+
+      &:hover {
+        background: rgba($color-athens-gray, 0.3);
+        border: 1px solid hsla(220, 100%, 25%, 0.3);
+        transition: all 0.3s ease;
+        box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000,
+          0 4px 12px -4px rgba(0, 0, 0, 0.15);
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Responsive adjustments
+
+@media (max-width: 576px) {
+  .resources-page {
+    .view-content {
+      grid-template-columns: unset;
+    }
+  }
+}

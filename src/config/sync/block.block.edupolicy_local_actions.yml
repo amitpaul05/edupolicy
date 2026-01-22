@@ -1,0 +1,20 @@
+uuid: 5a2c5621-645e-4638-af39-4c7dfa386848
+langcode: en
+status: true
+dependencies:
+  theme:
+    - edupolicy
+_core:
+  default_config_hash: AeOTbQbQ8k1uJ_JzrtdwMFhPk7umpelEmBTDcWNqIGc
+id: edupolicy_local_actions
+theme: edupolicy
+region: content
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

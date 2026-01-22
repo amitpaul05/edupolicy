@@ -1,0 +1,24 @@
+uuid: f3bd698a-efe6-465f-8f68-0629b166ff63
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.page
+  module:
+    - text
+_core:
+  default_config_hash: _5V-RqipdviPFL737_mD5u0cYh_cuh_FcpFOEZvFj50
+id: node.page.field_content
+field_name: field_content
+entity_type: node
+bundle: page
+label: Content
+description: 'The content of this page.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

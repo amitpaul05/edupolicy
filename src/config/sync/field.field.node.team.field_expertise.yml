@@ -1,0 +1,21 @@
+uuid: dfd65cfa-cfa8-4961-aa4c-2370707ddc4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_expertise
+    - node.type.team
+  module:
+    - options
+id: node.team.field_expertise
+field_name: field_expertise
+entity_type: node
+bundle: team
+label: Expertise
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

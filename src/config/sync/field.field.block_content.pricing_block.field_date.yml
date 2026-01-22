@@ -1,0 +1,19 @@
+uuid: c5393384-140d-4a81-95da-d69c5a725854
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.pricing_block
+    - field.storage.block_content.field_date
+id: block_content.pricing_block.field_date
+field_name: field_date
+entity_type: block_content
+bundle: pricing_block
+label: Date
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

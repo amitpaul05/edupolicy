@@ -1,0 +1,39 @@
+uuid: 545d3bc2-a572-4709-94ab-82e19fc11a7b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_expertise
+field_name: field_expertise
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: ai_ethics
+      label: 'AI Ethics'
+    -
+      value: policy_development
+      label: 'Policy Development'
+    -
+      value: risk_assessment
+      label: 'Risk Assessment'
+    -
+      value: implementation
+      label: Implementation
+    -
+      value: research_ethics
+      label: 'Research Ethics'
+    -
+      value: training
+      label: Training
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

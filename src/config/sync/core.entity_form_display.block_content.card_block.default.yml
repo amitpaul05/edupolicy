@@ -1,0 +1,42 @@
+uuid: 9d453ee4-db26-4bd8-86a3-e9665b1d8dd7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card_block
+    - field.field.block_content.card_block.body
+    - field.field.block_content.card_block.field_image
+  module:
+    - media_library
+    - text
+id: block_content.card_block.default
+targetEntityType: block_content
+bundle: card_block
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 0
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_image:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

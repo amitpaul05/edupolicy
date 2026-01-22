@@ -1,0 +1,19 @@
+uuid: 331326a5-2e79-4162-9c12-464917ae41ed
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_get_started
+field_name: field_get_started
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

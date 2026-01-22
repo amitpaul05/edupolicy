@@ -1,0 +1,24 @@
+uuid: cbde4172-f2a7-4494-a14e-04203c07471c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.text_block_with_icon
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.text_block_with_icon.body
+field_name: body
+entity_type: block_content
+bundle: text_block_with_icon
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

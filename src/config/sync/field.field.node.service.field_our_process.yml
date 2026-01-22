@@ -1,0 +1,31 @@
+uuid: fcf2d177-d1d3-484f-b3fb-9f84b9dbdd39
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_our_process
+    - node.type.service
+    - paragraphs.paragraphs_type.info_block
+  module:
+    - entity_reference_revisions
+id: node.service.field_our_process
+field_name: field_our_process
+entity_type: node
+bundle: service
+label: 'Our Process'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      info_block: info_block
+    negate: 0
+    target_bundles_drag_drop:
+      info_block:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions

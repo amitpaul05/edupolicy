@@ -1,0 +1,304 @@
+@import "../../styles/utilities/global-utilities";
+
+/* Pricing Table Wrapper */
+
+.pricing-page {
+
+  .block-title-with-subtitle {
+    margin-top: 80px;
+  }
+
+  .additional-services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-bottom: 80px;
+
+    .block {
+
+      &:hover {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+
+      h2 {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 28px;
+        text-align: center;
+      }
+
+      .field--name-body {
+        font-size: 14px;
+        line-height: 20px;
+
+        p {
+          color: $color-secondary;
+        }
+
+        strong {
+          color: $color-black;
+          font-size: 24px;
+          line-height: 32px;
+        }
+
+        ul,
+        ol {
+          list-style-type: none;
+          padding-left: 0;
+
+          li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            &::before {
+              color: #339933;
+              content: "\f058";
+              font-family: $font-awesome;
+              font-weight: 500;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .faq-block {
+
+    .block {
+      margin-bottom: 32px;
+
+      h2 {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 28px;
+        margin-bottom: 20px;
+      }
+
+      .field--name-body {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+.pricing-table {
+  display: flex;
+  gap: 32px;
+  flex-wrap: unset;
+  align-items: stretch;
+  margin: 0 0 80px;
+
+  > .layout__region--second > .pricing-card {
+    border: 2px solid $color-primary;
+    border-radius: 12px;
+    padding: 32px 24px;
+    top: -20px;
+
+    .pricing-button {
+
+      a {
+        color: $color-white;
+        background-color: $color-primary;
+
+        &:hover {
+          background: #002a80e6;
+        }
+      }
+    }
+  }
+
+  .pricing-card {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    background: $color-alabaster;
+    border: 1px solid $color-mischka;
+    border-radius: 12px;
+    padding: 32px 24px;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+
+    &:hover {
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+      img {
+        transform: scale(1.1);
+      }
+    }
+
+    .popularity-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: $color-primary;
+      color: $color-white;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 14px;
+      padding: 4px 12px;
+      border-radius: 12px;
+
+      &:empty {
+        display: none;
+      }
+    }
+
+    .pricing-icon {
+      margin-bottom: 16px;
+
+      img {
+        max-width: 48px;
+        height: auto;
+        transition: all 0.3s ease;
+      }
+    }
+
+    .pricing-title {
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 700;
+      margin-bottom: 0;
+      color: $color-black;
+    }
+
+    .pricing-subtitle {
+      font-size: 0.95rem;
+      color: $color-secondary;
+      margin-bottom: 16px;
+    }
+
+    .pricing-info {
+      text-align: center;
+      margin-bottom: 16px;
+
+      .price {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $color-black;
+
+        .fa-solid {
+          color: $color-primary;
+          font-weight: 500;
+          font-size: 20px;
+        }
+
+        .starting-text {
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: 400;
+          color: $color-secondary;
+          margin-left: 4px;
+        }
+      }
+
+      .duration {
+        display: block;
+        font-size: 14px;
+        line-height: 20px;
+        color: $color-secondary;
+        margin-top: 4px;
+
+        .field--name-field-date {
+          display: flex;
+          gap: 10px;
+          justify-content: center;
+          align-items: baseline;
+
+          &::before {
+            content: '\f017';
+            font-family: $font-awesome;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    .pricing-features {
+      margin-bottom: 24px;
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          position: relative;
+          padding-left: 28px;
+          font-size: 14px;
+          color: #1a1a1a;
+          margin-bottom: 8px;
+          display: flex;
+          text-align: left;
+          gap: 10px;
+          line-height: 28px;
+
+          &::before {
+            color: #339933;
+            content: "\f058";
+            font-family: $font-awesome;
+            font-weight: 500;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    .pricing-button {
+      margin-top: auto;
+
+      a {
+        display: inline-block;
+        width: 100%;
+        padding: 12px 0;
+        background: #f3f4f6;
+        color: #1a1a1a;
+        font-size: 14px;
+        line-height: 20px;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: background 0.2s ease;
+
+        &::after {
+          content: '\f061';
+          font-family: $font-awesome;
+          font-weight: 800;
+          margin-left: 10px;
+        }
+
+        &:hover {
+          background: #e5e7eb;
+        }
+      }
+    }
+
+    &.popular {
+      border: 2px solid $color-primary;
+      padding-top: 40px;
+
+      .popularity-badge {
+        background: $color-primary;
+      }
+
+      .pricing-button a {
+        background: $color-primary;
+        color: $color-white;
+
+        &:hover {
+          background: $color-primary;
+        }
+      }
+    }
+  }
+}

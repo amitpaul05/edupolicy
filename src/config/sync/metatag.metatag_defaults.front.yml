@@ -1,0 +1,13 @@
+uuid: a3afdb02-ab1a-4d9b-84e7-13cd1c000cdf
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1noCXlegCr5HFehQRF1ViXy1jhU1jZ_sNN99a8Sj5jo
+id: front
+label: 'Front page'
+tags:
+  canonical_url: '[site:url]'
+  description: 'Empowering educational institutions with responsible AI governance, ethics consultation, and policy development for ethical technology integration.'
+  shortlink: '[site:url]'
+  title: 'EduPolicy.ai - AI Ethics & Policy Development for Higher Education'

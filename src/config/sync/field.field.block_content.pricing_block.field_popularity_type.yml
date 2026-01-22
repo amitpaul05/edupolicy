@@ -1,0 +1,19 @@
+uuid: 68588c7d-aa6b-46b3-aa45-75b4fdf3a95d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.pricing_block
+    - field.storage.block_content.field_popularity_type
+id: block_content.pricing_block.field_popularity_type
+field_name: field_popularity_type
+entity_type: block_content
+bundle: pricing_block
+label: 'Popularity Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

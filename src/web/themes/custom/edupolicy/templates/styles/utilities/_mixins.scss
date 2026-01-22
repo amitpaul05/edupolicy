@@ -1,0 +1,11 @@
+@import "variables";
+
+// Mixins
+// --------------------------------------------------
+
+// Fluid image - keep image from scaling beyond the width of its parent container.
+// --------------------------------------------------
+@mixin img-fluid {
+   max-width: 100%;
+   height: auto;
+}

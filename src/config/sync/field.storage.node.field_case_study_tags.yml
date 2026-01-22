@@ -1,0 +1,30 @@
+uuid: 9f90ae12-685d-4f5a-a45d-b2d43fb3bc58
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_case_study_tags
+field_name: field_case_study_tags
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: policy_development
+      label: 'Policy Development'
+    -
+      value: training_education
+      label: 'Training & Education'
+    -
+      value: assessment
+      label: Assessment
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

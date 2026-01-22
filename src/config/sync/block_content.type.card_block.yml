@@ -1,0 +1,8 @@
+uuid: 2ff3787c-b30e-408a-803d-f5ee3bfc8878
+langcode: en
+status: true
+dependencies: {  }
+id: card_block
+label: 'Card Block'
+revision: false
+description: null

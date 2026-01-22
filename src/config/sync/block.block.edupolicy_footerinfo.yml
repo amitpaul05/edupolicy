@@ -1,0 +1,29 @@
+uuid: f8c54a1c-2770-4542-96d7-34dad8b0ab7f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:text_block:6c0da04c-e777-4ea7-a2a9-039c6dbe8d2f'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - edupolicy
+third_party_settings:
+  block_class:
+    classes: footer-text
+id: edupolicy_footerinfo
+theme: edupolicy
+region: footer
+weight: -7
+provider: null
+plugin: 'block_content:6c0da04c-e777-4ea7-a2a9-039c6dbe8d2f'
+settings:
+  id: 'block_content:6c0da04c-e777-4ea7-a2a9-039c6dbe8d2f'
+  label: 'Footer info'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

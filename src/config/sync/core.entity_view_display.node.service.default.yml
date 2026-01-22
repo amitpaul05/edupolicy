@@ -1,0 +1,233 @@
+uuid: 1c11a6bd-ee5a-46bb-aa85-0dea71fa03ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.service.field_benefits
+    - field.field.node.service.field_body
+    - field.field.node.service.field_call_to_action
+    - field.field.node.service.field_deliverables
+    - field.field.node.service.field_faq
+    - field.field.node.service.field_get_started
+    - field.field.node.service.field_key_features
+    - field.field.node.service.field_our_process
+    - field.field.node.service.field_service_fact
+    - field.field.node.service.field_service_metrics
+    - field.field.node.service.field_service_overview
+    - field.field.node.service.field_service_type
+    - field.field.node.service.field_why_choose_us
+    - node.type.service
+  module:
+    - entity_reference_revisions
+    - field_group
+    - link
+    - paragraphs_jquery_ui_accordion
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_overview
+        - group_how_it_works
+        - group_why_choose_us
+        - group_faq
+      label: Tabs
+      parent_name: ''
+      region: content
+      weight: 7
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        direction: horizontal
+        width_breakpoint: 640
+    group_overview:
+      children:
+        - field_key_features
+        - field_benefits
+      label: Overview
+      parent_name: group_tabs
+      region: content
+      weight: 15
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: open
+        description: ''
+    group_how_it_works:
+      children:
+        - field_our_process
+      label: 'How It Works'
+      parent_name: group_tabs
+      region: content
+      weight: 16
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: closed
+        description: ''
+    group_why_choose_us:
+      children:
+        - field_deliverables
+        - field_why_choose_us
+      label: 'Why Choose Us'
+      parent_name: group_tabs
+      region: content
+      weight: 17
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: closed
+        description: ''
+    group_faq:
+      children:
+        - field_faq
+      label: FAQ
+      parent_name: group_tabs
+      region: content
+      weight: 18
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: closed
+        description: ''
+id: node.service.default
+targetEntityType: node
+bundle: service
+mode: default
+content:
+  field_benefits:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_call_to_action:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_deliverables:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_faq:
+    type: paragraphs_jquery_ui_accordion_formatter
+    label: above
+    settings:
+      bundle: faq
+      title: field_question
+      content: field_answer
+      active: 1
+      autoscroll: false
+      autoscroll_offset: ''
+      autoscroll_offset_toolbar: false
+      view_mode: default
+      simple_id: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_get_started:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_key_features:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_our_process:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_service_fact:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_service_metrics:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_service_overview:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_service_type:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_why_choose_us:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

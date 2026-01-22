@@ -1,0 +1,190 @@
+// import utilities
+@import "../../styles/utilities/global-utilities";
+
+.path-user {
+  main {
+    background-image: linear-gradient(to bottom right, #eff6ff, #e0e7ff);
+  }
+
+  .region-content {
+    background-color: $color-alabaster;
+    max-width: 35rem;
+    margin: 100px auto;
+    border-width: 1px;
+    border-radius: 0.75rem;
+    width: 100%;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    color: hsl(220, 15%, 20%);
+    border-color: #c7cbd1;
+    border-style: solid;
+    padding: 1.5rem !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .block {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      h1 {
+        margin: 0;
+        font-size: 1.5rem;
+        letter-spacing: -0.025em;
+        line-height: 1;
+      }
+
+      .tabs {
+        margin-bottom: 1rem;
+        .tabs-wrapper {
+          height: 2.5rem;
+
+          ul {
+            display: grid;
+            border-radius: calc(0.75rem - 2px);
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            color: $color-mirage;
+            background-color: #e0e7ff;
+            padding: 0.25rem;
+
+            .nav-tabs,
+            .nav {
+              display: flex;
+              align-items: stretch;
+            }
+
+            .nav-item {
+              flex: 1;
+              display: flex;
+            }
+
+            .nav-item .nav-link {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              white-space: normal;
+              padding: 0.375rem 0.75rem;
+              font-size: 0.875rem;
+              color: #626d78;
+              font-weight: 500;
+              border-radius: calc(0.75rem - 4px);
+              transition: all 0.2s ease-in-out;
+              width: 100%;
+              text-align: center;
+              min-height: 2.5rem;
+
+              &:focus-visible {
+                outline: none;
+                box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #3b82f6;
+              }
+
+              &:disabled,
+              &.disabled {
+                pointer-events: none;
+                opacity: 0.5;
+              }
+
+              &.active,
+              &[aria-selected="true"],
+              &[data-state="active"] {
+                background-color: #f3f4f6;
+                color: #111827;
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+              }
+
+              &:hover:not(.active) {
+                background-color: #e5e7eb;
+              }
+            }
+          }
+        }
+      }
+
+      .form-item label {
+        font-size: 0.875rem;
+        font-weight: 500;
+        line-height: 1.25rem;
+        display: block;
+        margin-bottom: 0.25rem;
+        text-align: left;
+      }
+
+      .form-item {
+        position: relative;
+
+        .description {
+          position: absolute;
+          left: 0.75rem;
+          top: 50%;
+          transform: translateY(-50%);
+          pointer-events: none;
+          color: #626d78;
+          font-size: 0.875rem;
+          margin: 0;
+          transition: 0.2s ease-in-out;
+        }
+
+        .form-control,
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+          height: 2.5rem;
+          width: 100%;
+          border-radius: 0.375rem;
+          border: 1px solid #e5e7eb;
+          background-color: #ffffff;
+          padding: 0.5rem 0.75rem;
+          font-size: 1rem;
+          line-height: 1.5rem;
+          color: #111827;
+
+          &::placeholder {
+            color: transparent;
+          }
+
+          &:focus + .description,
+          &:not(:placeholder-shown) + .description {
+            opacity: 0;
+            visibility: hidden;
+          }
+
+          &:focus-visible {
+            outline: none;
+            box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #002a80;
+          }
+
+          &:disabled {
+            cursor: not-allowed;
+            opacity: 0.5;
+          }
+        }
+      }
+
+      .form-actions {
+        input {
+          width: 100%;
+          background-color: #002a80;
+        }
+      }
+    }
+  }
+}
+
+//responsive adjustments
+@media (max-width: 768px) {
+  .path-user {
+    .region-content {
+      .block {
+        .tabs {
+          .tabs-wrapper {
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}

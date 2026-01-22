@@ -1,0 +1,22 @@
+uuid: c4693188-d9f6-42c7-94a2-a777989a52fa
+langcode: en
+status: true
+dependencies:
+  theme:
+    - edupolicy
+_core:
+  default_config_hash: etxV2g6KCsMXCp0Rdp8GQdAat1V0seX-QJDHYUegXcw
+id: edupolicy_local_tasks
+theme: edupolicy
+region: content
+weight: -3
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

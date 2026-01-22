@@ -1,0 +1,391 @@
+// import utilities
+@import "../../styles/utilities/global-utilities";
+
+/* Hero Section Styles */
+.front-page-hero {
+  background: linear-gradient(to bottom, #eff6ff, #dbeafe),
+    linear-gradient(to right, rgba(59, 130, 246, 0.1), rgba(16, 185, 129, 0.1));
+  background-blend-mode: multiply;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 5rem 0;
+  position: relative;
+
+  .hero-wrapper {
+    display: flex;
+    align-items: center;
+    max-width: 1216px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 60px;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+//global hero styles
+
+.hero-wrapper {
+  .left-content {
+    flex: 1 1 50%;
+    text-align: left;
+
+    .title {
+      .field--name-field-title {
+        font-size: 3.75rem;
+        text-align: left;
+        font-weight: 800;
+        line-height: 1;
+        color: $color-mirage;
+        margin: 1rem 0 0;
+        letter-spacing: -0.02em;
+      }
+    }
+
+    .body {
+      p {
+        font-size: 1.2rem;
+        line-height: 1.75rem;
+        color: $color-secondary;
+        margin: 1rem 0 0;
+        font-weight: normal;
+      }
+    }
+
+    .subtitle {
+      .field__item {
+        background: $color-paradiso;
+        color: white;
+        display: inline-block;
+        padding: 0.125rem 0.625rem;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        letter-spacing: 0.5px;
+      }
+    }
+
+    .hero-links {
+      margin-top: 2rem;
+      text-align: left;
+
+      .field {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        &__item {
+          display: flex;
+
+          &:first-child {
+            a {
+              background: $color-primary;
+              color: $color-white;
+              padding: 0 2rem;
+              height: 2.75rem;
+              border-radius: 10px;
+              text-decoration: none;
+              font-weight: 500;
+              font-size: 0.875rem;
+              line-height: 1.25rem;
+              display: inline-flex;
+              align-items: center;
+              gap: 0.5rem;
+              transition: all 0.3s ease;
+              white-space: nowrap;
+
+              &:hover {
+                background: $color-torea-bay;
+                box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+              }
+
+              &::after {
+                content: "";
+                width: 16px;
+                height: 16px;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'%3E%3C/line%3E%3Cpolyline points='12,5 19,12 12,19'%3E%3C/polyline%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+              }
+            }
+          }
+
+          &:last-child {
+            a {
+              background: $color-white;
+              color: $color-mirage;
+              padding: 0 2rem;
+              height: 2.75rem;
+              border-radius: 10px;
+              text-decoration: none;
+              font-weight: 500;
+              font-size: 0.875rem;
+              line-height: 1.25rem;
+              display: inline-flex;
+              align-items: center;
+              border: 1px solid $color-athens-gray;
+              transition: all 0.3s ease;
+              white-space: nowrap;
+
+              &:hover {
+                background: $color-athens-gray;
+                border-color: #9ca3af;
+                box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+                  var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .right-content {
+    flex: 1 1 50%;
+
+    .field__item {
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        display: block;
+      }
+    }
+  }
+}
+
+.one-col-hero:not(.layout-builder__layout) {
+  background: linear-gradient(135deg, #002a80 0%, #267373 100%);
+  color: $color-white;
+  margin-left: calc(-50vw + 50%);
+  width: 100vw;
+  position: relative;
+  padding: 80px 0;
+
+  .hero-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1216px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 16px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+  }
+
+  .left-content {
+    text-align: center;
+
+    .title {
+      .field--name-field-title {
+        font-size: 48px;
+        text-align: center;
+        font-family: $font-helvetica-bold;
+        line-height: 64px;
+        color: $color-white;
+        margin: 1rem 0 0;
+      }
+    }
+
+    .body {
+      p {
+        font-size: 20px;
+        line-height: 28px;
+        color: $color-white;
+        margin: 1rem 0 0;
+        font-weight: normal;
+      }
+    }
+  }
+}
+
+// service child page hero design
+
+.hero {
+  background: linear-gradient(135deg, #1e3a8a 0%, #581c87 100%);
+  color: $color-white;
+  margin-left: calc(-50vw + 50%);
+  padding: 80px 0;
+  width: 100vw;
+
+  .row {
+    align-items: center;
+  }
+
+  .field--name-field-service-type {
+    a {
+      background: rgba(36, 107, 107, 0.8);
+      border-radius: 9999px;
+      color: #fff;
+      display: inline-block;
+      margin-bottom: 15px;
+      padding: 4px 10px 1px;
+      text-decoration: none;
+    }
+  }
+
+  h1 {
+    font-size: 48px;
+    line-height: 1;
+    margin-bottom: 24px;
+  }
+
+  .field--name-field-body {
+    font-size: 20px;
+    line-height: 1.625;
+    margin-bottom: 32px;
+  }
+
+  .field--name-field-get-started {
+    display: inline-block;
+
+    a {
+      background: #2563eb;
+      border-radius: 12px;
+      color: $color-white;
+      display: flex;
+      gap: 15px;
+      line-height: 40px;
+      padding: 0 32px;
+      text-decoration: none;
+
+      &:after {
+        content: "\f061";
+        font-family: $font-awesome;
+        font-weight: 900;
+      }
+    }
+  }
+
+  .field--name-field-service-fact {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+
+    > .field__item {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .field--name-field-title {
+      font-size: 30px;
+      line-height: 36px;
+      margin-bottom: 8px;
+    }
+
+    .field--name-field-description {
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+    padding: 0 16px;
+  }
+
+  .front-page-hero {
+    padding: 60px 0;
+  }
+
+  .left-content {
+    .title {
+      &:first-of-type {
+        .field__item {
+          font-size: 60px;
+        }
+      }
+
+      &:last-of-type {
+        .field__item {
+          p {
+            font-size: 1.1rem;
+            max-width: 100%;
+          }
+        }
+      }
+    }
+
+    max-width: 100%;
+  }
+
+  .hero-links {
+    .field {
+      justify-content: center;
+    }
+  }
+
+  .right-content {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-wrapper {
+    .left-content {
+      text-align: center;
+
+      .title {
+        &:first-of-type {
+          .field__item {
+            font-size: 2rem;
+            text-align: center;
+            line-height: 38px;
+          }
+        }
+      }
+
+      .hero-links {
+        text-align: center;
+
+        .field {
+          flex-direction: column;
+          align-items: center;
+
+          &__item {
+            display: block;
+            width: 100%;
+            a {
+              width: 100%;
+              text-align: center;
+              max-width: 280px;
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .one-col-hero:not(.layout-builder__layout) {
+    padding: 50px 0;
+  }
+
+  .hero {
+    padding: 50px 20px;
+
+    .field--name-field-service-fact {
+      grid-template-columns: unset;
+      margin-top: 20px;
+    }
+
+    h1 {
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+}

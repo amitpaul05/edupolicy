@@ -1,0 +1,30 @@
+uuid: 7e6633e7-35a2-47cd-8cea-9f6d32395281
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:card_block:d1107a23-4c9c-45f2-8361-797253d4be69'
+  module:
+    - block_content
+    - system
+  theme:
+    - drupal_cms_olivero
+id: drupal_cms_olivero_clientcountsection
+theme: drupal_cms_olivero
+region: content
+weight: -4
+provider: null
+plugin: 'block_content:d1107a23-4c9c-45f2-8361-797253d4be69'
+settings:
+  id: 'block_content:d1107a23-4c9c-45f2-8361-797253d4be69'
+  label: 'Client count section'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

@@ -1,0 +1,40 @@
+uuid: 07bf2cff-237c-45e2-ba4b-7fb16fb34985
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.text_block_with_subtitle
+    - field.field.block_content.text_block_with_subtitle.body
+    - field.field.block_content.text_block_with_subtitle.field_subtitle
+    - field.field.block_content.text_block_with_subtitle.field_title
+  module:
+    - text
+id: block_content.text_block_with_subtitle.default
+targetEntityType: block_content
+bundle: text_block_with_subtitle
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_subtitle:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

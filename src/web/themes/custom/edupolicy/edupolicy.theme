@@ -1,0 +1,51 @@
+<?php
+
+/**
+ * @file
+ * edupolicy theme file.
+ */
+
+
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ */
+function edupolicy_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node instanceof \Drupal\node\NodeInterface) {
+    $suggestions[] = 'page__' . $node->bundle();
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function edupolicy_theme_suggestions_views_view_alter(array &$suggestions, array $variables) {
+  $suggestions[] = 'views_view__' . $variables['view']->id();
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function edupolicy_theme_suggestions_views_view_unformatted_alter(array &$suggestions, array $variables) {
+  $suggestions[] = 'views_view_unformatted__' . $variables['view']->id();
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function edupolicy_theme_suggestions_views_view_fields_alter(array &$suggestions, array $variables) {
+  $suggestions[] = 'views_view_fields__' . $variables['view']->id();
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function edupolicy_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ($form_id === 'views_exposed_form') {
+    if (isset($form['service-type'])) {
+      if (isset($form['service-type']['#options']['All'])) {
+        $form['service-type']['#options']['All'] = t('All Categories');
+      }
+    }
+  }
+}

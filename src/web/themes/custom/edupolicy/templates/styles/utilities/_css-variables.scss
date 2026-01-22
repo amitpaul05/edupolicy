@@ -1,0 +1,13 @@
+// custom variables
+// --------------------------------------------------
+
+:root {
+
+   // spacing variables
+   --global-spacing-xs: calc(var(--global-spacing) / 2);
+   --global-spacing: 30px;
+   --global-spacing-md: calc(var(--global-spacing) * 2);
+   --global-spacing-lg: calc(var(--global-spacing) * 3);
+   --global-spacing-xl: calc(var(--global-spacing) * 4);
+   --global-spacing-xxl: calc(var(--global-spacing) * 5);
+}

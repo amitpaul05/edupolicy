@@ -1,0 +1,36 @@
+uuid: 53646593-f0a9-4974-a30a-bfb9aa03fc16
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card_block
+    - field.field.block_content.card_block.body
+    - field.field.block_content.card_block.field_image
+    - image.style.icon
+  module:
+    - media
+    - text
+id: block_content.card_block.default
+targetEntityType: block_content
+bundle: card_block
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: icon
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

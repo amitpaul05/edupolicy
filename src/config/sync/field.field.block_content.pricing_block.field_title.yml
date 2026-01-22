@@ -1,0 +1,19 @@
+uuid: f998b059-2202-4d24-a8a4-c926f522fa4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.pricing_block
+    - field.storage.block_content.field_title
+id: block_content.pricing_block.field_title
+field_name: field_title
+entity_type: block_content
+bundle: pricing_block
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

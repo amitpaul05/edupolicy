@@ -1,0 +1,30 @@
+uuid: cdeb78a7-1696-4d21-8410-f046fb95b851
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:card_block:e9a5c48b-be88-42c6-b917-68d15a8b1a7d'
+  module:
+    - block_content
+    - system
+  theme:
+    - drupal_cms_olivero
+id: drupal_cms_olivero_countsectionforfrontpage
+theme: drupal_cms_olivero
+region: content
+weight: -7
+provider: null
+plugin: 'block_content:e9a5c48b-be88-42c6-b917-68d15a8b1a7d'
+settings:
+  id: 'block_content:e9a5c48b-be88-42c6-b917-68d15a8b1a7d'
+  label: 'Count Section For front page'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

@@ -1,0 +1,31 @@
+uuid: dff7492c-77d9-4fe3-8a2c-68f203bb01f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.text_block_with_icon
+    - field.storage.block_content.field_image
+    - media.type.image
+    - media.type.svg_image
+id: block_content.text_block_with_icon.field_image
+field_name: field_image
+entity_type: block_content
+bundle: text_block_with_icon
+label: Icon
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      svg_image: svg_image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

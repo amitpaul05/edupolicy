@@ -1,0 +1,110 @@
+global-styling:
+  js:
+    dist/scripts/app/app.js: {}
+    # dist/scripts/all.js: {}
+  css:
+    base:
+      dist/css/app/app.css: {}
+      # dist/css/all.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+
+block:
+  css:
+    component:
+      dist/css/block/block.css: {}
+  js:
+    dist/scripts/block/block.js: {}
+
+header:
+  css:
+    component:
+      dist/css/header/header.css: {}
+  js:
+    dist/scripts/header/header.js: {}
+
+footer:
+  css:
+    component:
+      dist/css/footer/footer.css: {}
+  js:
+    dist/scripts/footer/footer.js: {}
+
+hero:
+  css:
+    component:
+      dist/css/hero/hero.css: {}
+  js:
+    dist/scripts/hero/hero.js: {}
+
+team:
+  css:
+    component:
+      dist/css/team/team.css: {}
+  js:
+    dist/scripts/team/team.js: {}
+
+form:
+  css:
+    component:
+      dist/css/form/form.css: {}
+  js:
+    dist/scripts/form/form.js: {}
+
+layout:
+  css:
+    component:
+      dist/css/layout/layout.css: {}
+  js:
+    dist/scripts/layout/layout.js: {}
+
+action:
+  css:
+    component:
+      dist/css/action/action.css: {}
+  js:
+    dist/scripts/action/action.js: {}
+
+case study:
+  css:
+    component:
+      dist/css/case study/case-study.css: {}
+  js:
+    dist/scripts/case study/case-study.js: {}
+
+about:
+  css:
+    component:
+      dist/css/about/about.css: {}
+  js:
+    dist/scripts/about/about.js: {}
+
+resource:
+  css:
+    component:
+      dist/css/resource/resource.css: {}
+  js:
+    dist/scripts/resource/resource.js: {}
+
+contact:
+  css:
+    component:
+      dist/css/contact/contact.css: {}
+  js:
+    dist/scripts/contact/contact.js: {}
+
+authentication:
+  css:
+    component:
+      dist/css/authentication/authentication.css: {}
+  js:
+    dist/scripts/authentication/authentication.js: {}
+
+pricing:
+  css:
+    component:
+      dist/css/pricing/pricing.css: {}
+  js:
+    dist/scripts/pricing/pricing.js: {}
+

@@ -1,0 +1,53 @@
+uuid: 2e55c122-b7a2-4861-b5a1-e853552bcf8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.service.field_benefits
+    - field.field.node.service.field_body
+    - field.field.node.service.field_call_to_action
+    - field.field.node.service.field_deliverables
+    - field.field.node.service.field_faq
+    - field.field.node.service.field_get_started
+    - field.field.node.service.field_key_features
+    - field.field.node.service.field_our_process
+    - field.field.node.service.field_service_fact
+    - field.field.node.service.field_service_metrics
+    - field.field.node.service.field_service_overview
+    - field.field.node.service.field_service_type
+    - field.field.node.service.field_why_choose_us
+    - node.type.service
+  module:
+    - text
+    - user
+id: node.service.teaser
+targetEntityType: node
+bundle: service
+mode: teaser
+content:
+  field_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_benefits: true
+  field_call_to_action: true
+  field_deliverables: true
+  field_faq: true
+  field_get_started: true
+  field_key_features: true
+  field_our_process: true
+  field_service_fact: true
+  field_service_metrics: true
+  field_service_overview: true
+  field_service_type: true
+  field_why_choose_us: true

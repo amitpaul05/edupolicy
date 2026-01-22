@@ -1,0 +1,25 @@
+uuid: 4dbb3b58-f7d0-4fb1-b69f-226762aa128e
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.resources
+  module:
+    - system
+  theme:
+    - edupolicy
+id: edupolicy_resources
+theme: edupolicy
+region: footer
+weight: -5
+provider: null
+plugin: 'system_menu_block:resources'
+settings:
+  id: 'system_menu_block:resources'
+  label: Resources
+  label_display: visible
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility: {  }

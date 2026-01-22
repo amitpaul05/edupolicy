@@ -1,0 +1,168 @@
+// Import utilities
+@import "utilities/global-utilities";
+@import "utilities/reset";
+@import "utilities/fonts";
+@import "utilities/css-variables";
+
+// Import layout
+// @import "layout/layout-structure";
+// @import "layout/template-layouts";
+// @import "layout/column-layouts";
+
+// Global body styles
+// --------------------------------------------------
+body {
+  background-color: $color-white;
+  color: $color-body;
+  font-family: $font-helvetica-medium !important;
+  line-height: 1.6;
+  margin: 0;
+
+  // Better font rendering
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Typography default styling
+// --------------------------------------------------
+
+// Heading styles
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+  margin: 0;
+}
+
+img {
+  @include img-fluid;
+}
+
+main {
+  overflow: clip;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.block-page-title-block {
+  .field--name-title {
+    display: block;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    margin-bottom: 16px;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+#block-edupolicy-content {
+  .page-body {
+    .layout__region--content {
+      .field--name-field-content {
+        p {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .field--name-field-content {
+
+    h2 {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 32px;
+    }
+
+    h3{
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 26px;
+    }
+
+    p {
+      color: $color-secondary;
+      font-size: 18px;
+      line-height: 28px;
+      text-align: left;
+    }
+
+    hr{
+      border: 1px solid $color-mischka;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      li {
+        position: relative;
+        padding-left: 16px;
+        color: $color-secondary;
+
+        &::before {
+          content: "•";
+          color: $color-secondary;
+          position: absolute;
+          left: 0;
+          top: 0;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.page-node-type-page,
+.page-node-type-resource {
+  .region-content {
+    padding: 50px 0 50px !important;
+  }
+}
+
+/*.page-node-type-page {
+  .region-content {
+    .block-field-blocknodepagefield-content {
+      .field--name-field-content {
+        p {
+          text-align: left;
+        }
+      }
+    }
+  }
+} */
+
+.service-page,
+.pricing-page {
+  .region-content {
+    padding: 0 !important;
+  }
+}
+
+//responsive styles
+
+@media (max-width: 576px) {
+  .block-page-title-block {
+    .field--name-title {
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+
+  .page-node-type-page,
+  .page-node-type-resource {
+    .region-content {
+      padding: 50px 0 50px;
+    }
+  }
+}
